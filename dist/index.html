@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Form Prototype Project</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header class="header">
+  <h1 id="title" class="text-center">Company Landing Page - Hiring Form</h1>
+  <p id="description" class="description text-center"><strong>Welcome to the team. Before you join, we want you to fill out this survey. Take your time.</strong></p>
+</header>
+<form id="survey-form">
+  
+  <div id="formbox">
+  <div class="form-element">
+    <label id="name-label" for="name"><p id="description">Name</p></label>
+      <input
+      type="text"
+      name="name"
+      id="name"
+      class="form-control"
+      placeholder="Enter your name"
+      pattern="[a-zA-Z]+"
+      oninvalid="setCustomValidity('Please enter letters only. This field is required.')"
+      required
+      />
+  </div>
+  <div class="form-element">
+      <label id="email-label" for="email"><p id="description">Email</p></label>
+      <input
+      type="email"
+      name="email"
+      id="email"
+      class="form-control"
+      placeholder="Enter your email"
+      oninvalid="setCustomValidity('Please enter in proper email format. This field is required.')"
+      required />
+    <br />
+  </div>
+  </div>
+  
+  <div class="form-group">
+    <label id="number-label" for="number-years"><span>How long have you been working in the IT industry? (2 minimum)</span></label>
+    <input
+      type="number"
+      name="number-years"
+      id="number"
+      min="2"
+      max="99"
+      class="form-control"
+      placeholder="# years"
+      pattern="[2-9]+"
+      oninvalid="setCustomValidity('Please enter in a number greater than 2. This field is required.')"
+      required
+    />
+  </div>
+  
+  <div class="form-group" id="formbox">
+      
+      
+      <p>Are you a Junior or Senior in your job occupation?</p>
+      <label>
+        <input
+          name="junior-or-senior"
+          value="Junior"
+          type="radio"
+          class="input-radio"
+          checked
+        />Junior</label
+      >
+      <label>
+        <input
+          name="junior-or-senior"
+          value="Senior"
+          type="radio"
+          class="input-radio"
+        />Senior</label
+      >
+  </div>
+  
+  <div class="form-group" id="dropdown">
+      <p>
+        What role do you wish to serve at our company?
+      </p>
+      <select id="most-like" name="mostLike" class="form-control" required style="height: 2rem;">
+        <option disabled selected value>Select your occupation</option>
+        <option value="software-dev">Software Engineer</option>
+        <option value="frontend-engineer">Frontend Engineer</option>
+        <option value="backend-engineer">Backend Engineer</option>
+        <option value="app-dev">Application Developer</option>
+        <option value="manager">Senior Manager</option>
+        <option value="designer">UI / UX Designer</option>
+        <option value="networker">Network Infrastructure</option>
+        <option value="cybersecurity">Cybersecurity Ops</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <p>
+        What is your skillset?
+        <span class="clue">(Only check what you are comfortable with):</span>
+      </p>
+      
+      <label>
+        <input
+        value="front-end"
+        name="skillset"
+        type="checkbox"
+        class="input-checkbox"
+        >Front-End (HTML/CSS/JavaScript)
+      </label>
+
+      <label>
+        <input
+        value="back-end"
+        name="skillset"
+        type="checkbox"
+        class="input-checkbox"
+        >Back-End (Databases)
+      </label>
+      
+      <label>
+        <input
+        value="fullstack"
+        name="skillset"
+        type="checkbox"
+        class="input-checkbox"
+        >Fullstack
+      </label>
+      
+      <label>
+        <input
+        value="android"
+        name="skillset"
+        type="checkbox"
+        class="input-checkbox"
+        >Android 
+      </label>
+      
+      <label>
+        <input
+        value="ios"
+        name="skillset"
+        type="checkbox"
+        class="input-checkbox"
+        >iOS
+      </label>
+      
+      <label>
+        <input
+        value="java-cpp"
+        name="skillset"
+        type="checkbox"
+        class="input-checkbox"
+        >Java or C++
+      </label>
+      
+      <label>
+        <input
+        value="python-php"
+        name="skillset"
+        type="checkbox"
+        class="input-checkbox"
+        >Python / PHP
+      </label>
+      
+    </div>
+     
+    <div class="form-group">
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </div>
+    
+    <div class="formbox">
+      <p id="description">(Optional): please provide additional comments:</p>
+      <textarea
+        id="comments"
+        class="input-textarea"
+        name="comment"
+        placeholder="Enter your comment here..."
+      ></textarea>
+    
+    
+    </div>
+    </form>
+</div>
+
+<button onclick="myFunction()">Toggle dark mode</button>
+
+<p id="title" class="text-center"> <a href="https://github.com/jadenhensley/" target="_blink">Prototype designed by <strong>@jadenhensley</strong> on GitHub. </a> </p>
+
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+<!-- partial -->
+  
+</body>
+</html>
