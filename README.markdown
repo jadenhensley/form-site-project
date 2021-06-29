@@ -15,3 +15,6 @@ This prototype is a form website with pleasing aesthetics.
 
 # Attribution - Background used.
 <a href="https://unsplash.com/@vimarethomas">Image by <strong>Thomas Vimare</strong> on <strong>Unsplash</strong>.</a>
+
+# Screenshot
+https://github.com/jadenhensley/form-site-project/blob/main/form_screenshot.PNG
